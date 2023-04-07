@@ -2,15 +2,14 @@ import React, { useState } from 'react';
 import './App.css';
 import Home from "./pages/Home"
 import Destination from './pages/Destination';
+import Crew from './pages/Crew';
 import Navbar from './components/Navbar';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
-
 import defaultBg from "./assets/home/background-home-desktop.jpg"
 
 function App() {
   const [bg, setBg] = useState(defaultBg)
-
 
   function changeBg(bg: any) {
     setBg(bg)
@@ -47,7 +46,7 @@ function Content() {
       <Routes location={displayLocation}>
         <Route path="" element={<Home />} />
         <Route path="dest" element={<Destination />} />
-        <Route path="crew" element={<Home />} />
+        <Route path="crew" element={<Crew />} />
         <Route path="tech" element={<Home />} />
       </Routes>
     </div>

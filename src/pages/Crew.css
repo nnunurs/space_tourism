@@ -1,0 +1,86 @@
+.crew {
+    font-family: "Barlow Condensed";
+    display: flex;
+    justify-content: space-between;
+    gap: 81.43px;
+    color: white;
+
+    height: calc(100vh - 96px - 40px)
+}
+
+.crew-desc {
+    margin: 76px 0 0 166.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dot {
+    background-color: #FFFFFF;
+    opacity: 0.17;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.dot.active {
+    background-color: #FFFFFF;
+    opacity: 1;
+}
+
+.crew-role {
+    font-family: 'Bellefair';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 37px;
+
+    text-transform: uppercase;
+    color: #FFFFFF;
+    opacity: 0.5;
+    margin: 154px 0 0 0;
+}
+
+.crew-name {
+    margin: 15px 0 0 0;
+
+    font-family: 'Bellefair';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 64px;
+    text-transform: uppercase;
+}
+
+.crew-bio {
+    margin: 27px 0 0 0;
+    width: 444px;
+
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+
+    color: #D0D6F9;
+}
+
+.nav-dots {
+    display: flex;
+    gap: 24px;
+
+    margin-bottom: 94px;
+}
+
+.crew-img {
+    height: 80%;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.img-container {
+    margin: 0 150px 0 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}

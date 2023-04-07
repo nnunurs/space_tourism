@@ -1,42 +1,51 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./Destination.css"
-import moon from "../assets/destination/image-moon.webp"
 import { useState } from 'react'
+import data from "../assets/data.json"
 
 export default function Destination() {
     const [planet, setplanet] = useState("moon")
+    const [planetData, setPlanetData] = useState(JSON.parse("{}"))
 
     function getName(e: React.MouseEvent) {
         const item = e.target as HTMLElement
-
         const text = item.innerText.toLowerCase()
         setplanet(text)
     }
+
+    function capitilize(word: string) {
+        return word.charAt(0).toUpperCase() + word.slice(1)
+    }
+
+    useEffect(() => {
+        const tempData: any= data.destinations.find((item: any) => item.name === capitilize(planet))
+        setPlanetData(tempData)
+    }, [planet])
 
     return (
         <div className='destination'>
             <div className="planet">
                 <div className="caption"><span className='number'>01</span>PICK YOUR DESTINATION</div>
-                <img src={moon} alt="" />
+                <img src={`/assets/destination/image-${planet}.webp`} alt="" className='dest-img'/>
             </div>
             <div className="info">
                 <ul className="planets-chooser">
-                    <li onClick={(e) => getName(e)}>MOON</li>
-                    <li onClick={(e) => getName(e)}>MARS</li>
-                    <li onClick={(e) => getName(e)}>EUROPA</li>
-                    <li onClick={(e) => getName(e)}>TITAN</li>
+                    {data.destinations.map((item: any) => {
+                        if (item.name === capitilize(planet)) return <li className="active" onClick={(e) => getName(e)}>{item.name}</li>
+                        return <li onClick={(e) => getName(e)}>{item.name}</li>
+                        })}
                 </ul>
                 <div className="title">{planet}</div>
-                <div className="body">See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</div>
+                <div className="body">{planetData.description}</div>
                 <div className="info-line"></div>
                 <div className="dist">
                     <div className="avg">
                         <div className="cap">AVG. DISTANCE</div>
-                        <div className="num">384,400 KM</div>
+                        <div className="num">{planetData.distance}</div>
                     </div>
                     <div className="est">
                         <div className="cap">Est. travel time</div>
-                        <div className="num">3 DAYS</div>
+                        <div className="num">{planetData.travel}</div>
                     </div>
                 </div>
             </div>
