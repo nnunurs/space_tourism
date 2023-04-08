@@ -6,6 +6,7 @@ import { NavLink } from "react-router-dom"
 import defaultBg from "../assets/home/background-home-desktop.jpg"
 import destBg from "../assets/destination/background-destination-desktop.jpg"
 import crewBg from "../assets/crew/background-crew-desktop.jpg"
+import techBg from "../assets/technology/background-technology-desktop.jpg"
 
 export default function Navbar(props: { changeBg: (arg0: string) => any}) {
     return (
@@ -18,7 +19,7 @@ export default function Navbar(props: { changeBg: (arg0: string) => any}) {
                     <li><NavLink to="" onClick={() => props.changeBg(defaultBg)} className={({ isActive }) => (isActive ? "active" : "")}><span className='bold'>00</span> HOME</NavLink></li>
                     <li><NavLink to="dest" onClick={() => props.changeBg(destBg)} className={({ isActive }) => (isActive ? "active" : "")}><span className='bold'>01</span> DESTINATION</NavLink></li>
                     <li><NavLink to="crew" onClick={() => props.changeBg(crewBg)} className={({ isActive }) => (isActive ? "active" : "")}><span className='bold'>02</span> CREW</NavLink></li>
-                    <li><NavLink to="tech" className={({ isActive }) => (isActive ? "active" : "")}><span className='bold'>03</span> TECHNOLOGY</NavLink></li>
+                    <li><NavLink to="tech" onClick={() => props.changeBg(techBg)} className={({ isActive }) => (isActive ? "active" : "")}><span className='bold'>03</span> TECHNOLOGY</NavLink></li>
                 </ul>
             </nav>
         </div >

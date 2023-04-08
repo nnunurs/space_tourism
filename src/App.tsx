@@ -3,6 +3,7 @@ import './App.css';
 import Home from "./pages/Home"
 import Destination from './pages/Destination';
 import Crew from './pages/Crew';
+import Tech from './pages/Tech';
 import Navbar from './components/Navbar';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -47,7 +48,7 @@ function Content() {
         <Route path="" element={<Home />} />
         <Route path="dest" element={<Destination />} />
         <Route path="crew" element={<Crew />} />
-        <Route path="tech" element={<Home />} />
+        <Route path="tech" element={<Tech />} />
       </Routes>
     </div>
   )
