@@ -104,3 +104,13 @@
     color: #0B0D17;
     background-color: #FFFFFF;
 }
+
+@media screen and (max-height: 800px) {
+    .tech-text {
+        margin-top: 30px;
+    }
+
+    .tech-img {
+        height: 50vh;
+    }
+}

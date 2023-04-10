@@ -35,9 +35,7 @@ export default function Tech() {
             <div className="tech-info">{techdata.description}</div>
           </div>
         </div>
-        <div className="tech-col3">
-          <img src={`${techdata.images.portrait.slice(1)}`} alt="" />
-        </div>
+        <img src={`${process.env.PUBLIC_URL}${techdata.images.portrait.slice(1)}`} alt="" className='tech-img'/>
       </div>
     </div>
   )

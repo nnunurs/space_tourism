@@ -26,6 +26,7 @@
     list-style-type: none;
 
     background: rgba(255, 255, 255, 0.04);
+    -webkit-backdrop-filter: blur(40.7742px);
     backdrop-filter: blur(40.7742px);
 }
 
@@ -36,7 +37,7 @@
 
 .line {
     position: absolute;
-    width: 473px;
+    width: calc(473/1440 * 100vw);
     height: 1px;
     left: 165px;
     top: 88px;

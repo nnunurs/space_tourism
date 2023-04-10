@@ -16,10 +16,10 @@ export default function Navbar(props: { changeBg: (arg0: string) => any}) {
             <div className="blur"></div>
             <nav>
                 <ul className='navlinks'>
-                    <li><NavLink to="" onClick={() => props.changeBg(defaultBg)} className={({ isActive }) => (isActive ? "active" : "")}><span className='bold'>00</span> HOME</NavLink></li>
-                    <li><NavLink to="dest" onClick={() => props.changeBg(destBg)} className={({ isActive }) => (isActive ? "active" : "")}><span className='bold'>01</span> DESTINATION</NavLink></li>
-                    <li><NavLink to="crew" onClick={() => props.changeBg(crewBg)} className={({ isActive }) => (isActive ? "active" : "")}><span className='bold'>02</span> CREW</NavLink></li>
-                    <li><NavLink to="tech" onClick={() => props.changeBg(techBg)} className={({ isActive }) => (isActive ? "active" : "")}><span className='bold'>03</span> TECHNOLOGY</NavLink></li>
+                    <li><NavLink to="/" onClick={() => props.changeBg(defaultBg)} className={({ isActive }) => (isActive ? "active" : "")}><span className='bold'>00</span> HOME</NavLink></li>
+                    <li><NavLink to="/dest" onClick={() => props.changeBg(destBg)} className={({ isActive }) => (isActive ? "active" : "")}><span className='bold'>01</span> DESTINATION</NavLink></li>
+                    <li><NavLink to="/crew" onClick={() => props.changeBg(crewBg)} className={({ isActive }) => (isActive ? "active" : "")}><span className='bold'>02</span> CREW</NavLink></li>
+                    <li><NavLink to="/tech" onClick={() => props.changeBg(techBg)} className={({ isActive }) => (isActive ? "active" : "")}><span className='bold'>03</span> TECHNOLOGY</NavLink></li>
                 </ul>
             </nav>
         </div >

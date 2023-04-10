@@ -1,6 +1,8 @@
-.main {
+.home {
     display: flex;
+    align-items: flex-end;
     gap: 386px;
+    height: calc(100vh - 96px - 40px);
 }
 
 .hero-text {
@@ -10,7 +12,7 @@
 
     width: calc(450/1440 * 100vw);
 
-    margin: 251px 0 0 165px;
+    margin: 0 0 131px 165px;
 }
 
 .start {
@@ -35,7 +37,7 @@
     color: #FFFFFF;
 }
 
-.body {
+.home-info {
     font-family: 'Barlow';
     font-style: normal;
     font-weight: 400;
@@ -56,7 +58,25 @@
     justify-content: center;
     align-items: center;
 
-    margin: 359px 0 131px 0;
+    margin: 0 0 131px 0;
+}
+
+.explore-under {
+    background-color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.1;
+
+    transition: height 100ms ease;
+
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    height: calc(274/1440 * 100vw);
+}
+
+.explore-button:hover .explore-under {
+    height: calc(274/1440 * 164.2335766vw);
 }
 
 .ellipse-text {

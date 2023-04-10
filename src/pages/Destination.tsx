@@ -26,9 +26,9 @@ export default function Destination() {
         <div className='destination'>
             <div className="planet">
                 <div className="caption"><span className='number'>01</span>PICK YOUR DESTINATION</div>
-                <img src={`/assets/destination/image-${planet}.webp`} alt="" className='dest-img'/>
+                <img src={`${process.env.PUBLIC_URL}/assets/destination/image-${planet}.webp`} alt="" className='dest-img'/>
             </div>
-            <div className="info">
+            <div className="dest-info">
                 <ul className="planets-chooser">
                     {data.destinations.map((item: any) => {
                         if (item.name === capitilize(planet)) return <li className="active" onClick={(e) => getName(e)}>{item.name}</li>

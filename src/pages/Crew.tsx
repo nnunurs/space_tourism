@@ -33,7 +33,7 @@ export default function Crew() {
                 </div>
             </div>
             <div className="img-container">
-                <img src={`/assets/crew/image-${member.split(" ")[0].toLowerCase()}-${member.split(" ")[1].toLowerCase()}.webp`} alt="" className="crew-img" />
+                <img src={`${process.env.PUBLIC_URL}/assets/crew/image-${member.split(" ")[0].toLowerCase()}-${member.split(" ")[1].toLowerCase()}.webp`} alt="" className="crew-img" />
             </div>
         </div>
     )

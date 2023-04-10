@@ -18,8 +18,8 @@ function App() {
   }
 
   return (
-    <div style={{ backgroundImage: `url(${bg})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", height: "100vh", width: "100vw"}}>
-      <BrowserRouter>
+    <div style={{ backgroundImage: `url(${bg})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", height: "100vh", width: "100vw", transition: "background-image 500ms"}}>
+      <BrowserRouter basename={`/${process.env.PUBLIC_URL}`}>
         <Navbar changeBg={changeBg} />
         <Content />
       </BrowserRouter>
@@ -45,10 +45,10 @@ function Content() {
       }
     }}>
       <Routes location={displayLocation}>
-        <Route path="" element={<Home />} />
-        <Route path="dest" element={<Destination />} />
-        <Route path="crew" element={<Crew />} />
-        <Route path="tech" element={<Tech />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/dest" element={<Destination />} />
+        <Route path="/crew" element={<Crew />} />
+        <Route path="/tech" element={<Tech />} />
       </Routes>
     </div>
   )
