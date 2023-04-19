@@ -31,8 +31,8 @@ export default function Destination() {
             <div className="dest-info">
                 <ul className="planets-chooser">
                     {data.destinations.map((item: any) => {
-                        if (item.name === capitilize(planet)) return <li className="active" onClick={(e) => getName(e)}>{item.name}</li>
-                        return <li onClick={(e) => getName(e)}>{item.name}</li>
+                        if (item.name === capitilize(planet)) return <li className="pl-nav active" onClick={(e) => getName(e)}>{item.name}</li>
+                        return <li className='pl-nav' onClick={(e) => getName(e)}>{item.name}</li>
                         })}
                 </ul>
                 <div className="title">{planet}</div>

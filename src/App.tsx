@@ -11,7 +11,7 @@ import defaultBg from "./assets/home/background-home-desktop.jpg"
 
 function App() {
   const [bg, setBg] = useState(defaultBg)
-
+  
   function changeBg(bg: any) {
     setBg(bg)
     console.log(bg)

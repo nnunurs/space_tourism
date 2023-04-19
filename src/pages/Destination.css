@@ -95,11 +95,23 @@
     text-transform: uppercase;
 }
 
-li.active {
+.pl-nav {
+    cursor: pointer;
+}
+
+.pl-nav.active {
     color: white;
     text-underline-offset: 12px;
     text-decoration-thickness: 3px;
     text-decoration-line: underline;
+
+}
+
+.pl-nav:hover:not(.active){
+    text-underline-offset: 12px;
+    text-decoration-thickness: 3px;
+    text-decoration-line: underline;
+    text-decoration-color: hsla(0, 100%, 100%, 0.5);
 }
 
 @media screen and (max-height: 800px) {

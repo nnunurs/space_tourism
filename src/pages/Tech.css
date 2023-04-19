@@ -96,6 +96,12 @@
 
     text-align: center;
     letter-spacing: 2px;
+
+    cursor: pointer;
+}
+
+.circle-nav:hover:not(.active) {
+    border-color: white;
 }
 
 .circle-nav.active {

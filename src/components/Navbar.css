@@ -73,8 +73,39 @@ a {
     text-decoration: none;
 }
 
+a:hover:not(.active){
+    text-underline-offset: 40px;
+    text-decoration-thickness: 3px;
+    text-decoration-line: underline;
+    text-decoration-color: hsla(0, 100%, 100%, 0.5);
+}
+
 a.active {
     text-underline-offset: 40px;
     text-decoration-thickness: 3px;
     text-decoration-line: underline;
+}
+
+
+@media screen and (max-width: 800px) {
+    .navbar {
+        padding-top: 0;
+    }
+    
+    .logo {
+        margin-left: 39px;
+    }
+
+    .bold {
+        display: none;
+    }
+
+    .navlinks {
+        padding: 39px 46px 36px 48px;
+        width: 450px;
+    }
+
+    .line {
+        display: none;
+    }
 }

@@ -59,6 +59,8 @@
     align-items: center;
 
     margin: 0 0 131px 0;
+
+    cursor: pointer;
 }
 
 .explore-under {
@@ -89,4 +91,42 @@
     letter-spacing: 2px;
 
     color: #0B0D17;
+}
+
+@media screen and (max-width: 800px) {
+    .home {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .start {
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 3.375px;
+    }
+
+    .space {
+        line-height: 150px;
+    }
+
+    .hero-text {
+        margin: 106px 0 156px 0;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .home-info {
+        width: 444px;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .explore-button {
+        /* aspect-ratio: 1/1; */
+        width: 242px;
+        height: 242px;
+        margin: 0;
+    }
 }
